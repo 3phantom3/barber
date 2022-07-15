@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,56 +7,89 @@
     <link rel="stylesheet" href="css/normalize.css">
     <title>Барбершоп "Бородинский"</title>
 </head>
-<body>
+<body class="page-body">
 
-   <header>
-    <a href="index.html">
-        <img src="img/logo-index.svg" width='368' height="153"
-    alt='Логотип барбершоп "Бородинский"'>
-    </a>
-    <nav>
-        <ul>
-        <li><a href="blank.html">Информация</a></li>
-        <li><a href='blank.html'>Новости</a></li>
-        <li><a href="price.html">Прайс-лист</a></li>
-        <li><a href="catalog.html">Магазин</a></li>
-        <li><a href="blank.html">Контакты</a></li>
-        </ul>
-    </nav>
-    <a href="blank.html">Вход</a>
+   <header class="main-hesder">
+     <nav class="main-navigation">
+       <a href="index.html">
+           <img src="img/logo-index.svg" width='368' height="153"
+       alt='Логотип барбершоп "Бородинский"'>
+       </a>
+       <ul class="site-navigation">
+         <li><a href="blank.html">Информация</a></li>
+         <li><a href='blank.html'>Новости</a></li>
+         <li><a href="price.html">Прайс-лист</a></li>
+         <li><a href="catalog.html">Магазин</a></li>
+         <li><a href="blank.html">Контакты</a></li>
+      </ul>
+      <a class="login-link" href="blank.html">Вход</a>
+     </nav>
    </header>
 
    <main>
- 
+
    </main>
-   <footer>
-       <section>
+   <footer class="main-footer">
+       <section class="footer-contacts">
            <h2>Как нас найти</h2>
         <p>БАРБЕРШОП «БОРОДИНСКИЙ»<br>
             АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8<br>
-            <a href="blank.html">Как нас найти?</a><br>
-            Телефон: <a href="tel:+78126660266">+7 (812) 666-02-66</a><br>
+            <a class="footer-adress" href="blank.html">Как нас найти?</a><br>
+            Телефон: <a class="footer-phone" href="tel:+78126660266">+7 (812) 666-02-66</a><br>
         </p>
        </section>
-       <section>
+       <section class="footer-social">
            <h2>Давайте дружить</h2>
            <ul>
                <li>
-                   <a href="#">Вконтакте</a>
+                   <a class="social-button" href="#">Вконтакте</a>
                </li>
                <li>
-                   <a href="#">Фейсбук</a>
+                   <a class="socisl-button" href="#">Фейсбук</a>
                </li>
                <li>
-                   <a href="#">Инстаграмм</a>
+                   <a class="social-button" href="#">Инстаграмм</a>
                </li>
             </ul>
        </section>
-       <section>
+       <section class="footer-copyright">
            <h2>Разработано</h2>
-           <a href="#">Html Academy</a>
+           <a class="button" href="#">Html Academy</a>
        </section>
-   </footer> 
-    
+   </footer>
+
+   <Section class="modal modal-login">
+       <h2>Личный кабинет</h2>
+       <p class="modal-description">Введите пожалуйста свой логин и пароль</p>
+
+       <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+           <p>
+               <label for="login-login">Логин</label>
+               <input class="login-icon-user" type="email" id="login-login" name="login" placeholder="email@example.com">
+           </p>
+           <p>
+               <label for='login-password'>Пароль</label>
+               <input class="login-icon-password" type="password" id="login-password" name='password' placeholder="********">
+           </p>
+           <p class="login-help">
+           <label>
+           <input class="login-checkbox" type="checkbox" id="login-chek" name='chek'>
+           Запомните меня
+           </label>
+           <a class="restore" href="#">Я забыл пароль</a>
+           </p>
+           <p>
+           <button type="submit">Войти</button>
+           </p>
+       </form>
+       <button class="modal-close" type="button">Закрыть</button>
+   </Section>
+
+   <section class="modal modal-map">
+       <h2>Как до нас добраться?</h2>
+       <!--Здесь будет карта-->
+       <button class="modal-close" type="button">Закрыть</button>
+   </section>
+   
 </body>
 </html>
