@@ -116,6 +116,20 @@ img {
   display: flex;
 }
 
+.site-navigation-current{
+  position: relative;
+}
+
+.site-navigation-current::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--basic-white);
+  position: absolute;
+  bottom: 0;
+}
+ß
 
 .user-navigation .login-link{
   padding-left: 50px;
@@ -373,7 +387,33 @@ img {
 
 .breadcrumbs {
   list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 49px;
 }
+
+.breadcrumb{
+ margin-right: 40px;
+ position: relative;
+
+}
+
+.breadcrumb::after{
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  background-color: var(--basic-black);
+  position: absolute;
+  right: -25px;
+  top: 7px;
+ }
+.breadcrumb-current::after{
+  display: none;
+}
+
 
 .breadcrumbs a {
   color: var(--basic-black);
@@ -384,23 +424,108 @@ img {
   text-decoration: underline;
 }
 
-.breadcrumbs-current {
+.breadcrumb-current {
   color: var(--basic-darck);
+}
+
+.filters form{
+  display: grid;
+  grid-template-rows: auto;
+  gap: 51px;
+}
+
+.filters fieldset{
+  border: none;
+  padding: 0;
 }
 
 .filters legend {
   font-size: 24px;
   line-height: 30px;
+  margin-bottom: 28px;
 }
 
 .filter ul {
   list-style: none;
   line-height: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-option{
+  margin-bottom: 19px;
+  padding-left: 43px;
+  position: relative;
+}
+
+.filter-option:last-child{
+  margin-bottom: 0;
+}
+
+.filter-checkbox label::before{
+  content: '';
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--basic-black);
+  left:0;
+}
+
+
+.filter-checkbox input:checked + label::after{
+  content: '';
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  background-image: url(../img/cross.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  left:3px;
+  top: 3px;
+}
+
+.filter-radio label::before{
+  content: '';
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--basic-black);
+  border-radius: 100%;
+  left:0;
+}
+
+
+.filter-radio input:checked + label::after{
+  content: '';
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  width: 8px;
+  height: 8px;
+  background-color: var(--basic-black);
+  border-radius: 100%;
+  left:5.5px;
+  top: 5px;
 }
 
 .filter-input-checkbox:hover + label,
 .filter-input-chekbox:focus + label {
   color: var(--special);
+}
+
+.filter .button{
+
+  width: 112px;
+  min-height: 43px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 .catalog {
@@ -409,42 +534,90 @@ img {
 
 .catalog-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
 }
 
 .catalog-item {
   background-color: var(--basic-extra-light);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
 }
 
+.catalog-item:nth-child(3n){
+  margin-right: 0;
+}
+
+
+
 .catalog-item a {
+  display: flex;
+  flex-direction: column-reverse;
   color: var(--basic-black);
 }
+
 
 .catalog-item h3 {
   font-size: 14px;
   line-height: 18px;
   text-transform: none;
+  margin: 14px 16px 12px 16px;
+}
+
+
+.catalog-item-price{
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 187px;
+
 }
 
 .catalog-item-price b {
+  display: flex;
   font-size: 14px;
   line-height: 20px;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   background-color: var(--basic-nautral);
+  flex-grow: 1;
 }
 
 .catalog-item-price button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 78px;
+  min-height: 43px;
   line-height: 20px;
   color: var(--basic-white);
 }
 
 .pagination-list {
   list-style: none;
+  display: flex;
 }
 
+
+
 .pagination-item a {
+  display: flex;
+  width: 43px;
+  height: 43px;
   color: var(--basic-white);
   background-color: var(--basic-black);
+  align-items: center;
+  justify-content: center;
+  margin: 7px;
 }
 
 .pagination-item a:focus,
@@ -723,8 +896,6 @@ img {
 .page-catalog .breadcrumbs {
   grid-column: 1/-1;
   margin-bottom: 40px;
-  margin: 0;
-  padding: 0;
 }
 
 .page-product {
