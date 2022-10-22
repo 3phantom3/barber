@@ -81,6 +81,7 @@ img {
 }
 
 .main-header-logo {
+  padding-top: 60px;
   order: 1;
   justify-self: center;
 }
@@ -169,7 +170,7 @@ img {
 }
 
 .features {
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 }
 
 .features-list {
@@ -194,6 +195,7 @@ img {
   line-height: 42px;
   position: relative;
   margin-bottom: 59px;
+  margin-top: 20px;
 }
 
 .features-items h3::after {
@@ -261,7 +263,11 @@ img {
 }
 
 .gallery {
-  margin: 47px 87px 48px 89px;
+  margin: 47px auto 48px 90px;
+}
+
+.gallery h2{
+  margin-bottom: 26px;
 }
 
 .gallery-container {
@@ -648,7 +654,7 @@ img {
   background-image: url("../img/patern-black.jpg");
   background-position: 0 0;
   background-repeat: repeat;
-  padding-top: 59px;
+  padding-top: 55px;
   padding-bottom: 38px;
 }
 
