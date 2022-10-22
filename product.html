@@ -173,36 +173,34 @@
       </div>
     </footer>
 
-<Section class="modal modal-login display-off">
-  <h2>Личный кабинет</h2>
-  <p class="modal-description">Введите пожалуйста свой логин и пароль</p>
-
-  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-      <p>
-          <label for="login-login">Логин</label>
-          <input class="login-icon-user" type="email" id="login-login" name="login" placeholder="email@example.com">
-      </p>
-      <p>
-          <label for='login-password'>Пароль</label>
-          <input class="login-icon-password" type="password" id="login-password" name='password' placeholder="********">
-      </p>
-      <p class="login-help">
-          <label>
-              <input class="login-checkbox" type="checkbox" id="login-chek" name='chek'>
-              Запомните меня
-          </label>
-          <a class="restore" href="#">Я забыл пароль</a>
-      </p>
-      <p>
-          <button type="submit">Войти</button>
-      </p>
-  </form>
-  <button class="modal-close" type="button">Закрыть</button>
-</Section>
-<section class="modal modal-map display-off">
-  <h2>Как до нас добраться?</h2>
-  <!--Здесь будет карта-->
-  <button class="modal-close" type="button">Закрыть</button>
-</section>
-</body>
-</html>
+    <Section class="modal modal-login display-off">
+      <h2>Личный кабинет</h2>
+      <p class="modal-description">Введите пожалуйста свой логин и пароль</p>
+  
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+          <p>
+              <label class="visually-hidden" for="login-login">Логин</label>
+              <input class="login-icon-user" type="email" id="login-login" name="login" placeholder="email@example.com">
+          </p>
+          <p>
+              <label class="visually-hidden" for='login-password'>Пароль</label>
+              <input class="login-icon-password" type="password" id="login-password" name='password' placeholder="********">
+          </p>
+          <p class="login-help">
+              <input class="login-checkbox visually-hidden" type="checkbox" id="login-chek" name='chek'>
+              <label class='login-checkbox-label' for="login-chek">Запомните меня</label>
+              <a class="restore" href="#">Я забыл пароль!</a>
+          </p>
+          <p>
+              <button class="button button-login" type="submit">Войти</button>
+          </p>
+      </form>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  </Section>
+  <section class="modal modal-map display-off">
+      <h2 class="visually-hidden">Как до нас добраться?</h2>
+      <!--Здесь будет карта-->
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+  </section>
+  </body>
+  </html>
