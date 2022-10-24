@@ -95,7 +95,7 @@
             ПН—ПТ: С 10:00 ДО 22:00<br>
             СБ—ВС: С 10:00 ДО 19:00<br>
         </p>
-        <a class="button" href="blank.html">Как проехать</a>
+        <a class="button map-link" href="blank.html">Как проехать</a>
         <a class="button" href="blank.html">Обратная связь</a>
     </section>
 
@@ -131,7 +131,7 @@
         <h2 class="visually-hidden">Как нас найти</h2>
         <p>БАРБЕРШОП «БОРОДИНСКИЙ»<br>
             АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ Б. КОНЮШЕННАЯ, Д. 19/8<br>
-            <a class="footer-adress" href="blank.html">Как нас найти?</a><br>
+            <a class="footer-adress map-link" href="blank.html">Как нас найти?</a><br>
             Телефон: <a class="footer-phone" href="tel:+78126660266">+7 (812) 666-02-66</a><br>
         </p>
     </section>
@@ -153,22 +153,24 @@
       <b>Разработано:</b> <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
     </div>
 </footer>
+<section class="overlay">
+</section>
 
-<Section class="modal modal-login display-off">
+<Section class="modal modal-login">
     <h2>Личный кабинет</h2>
     <p class="modal-description">Введите пожалуйста свой логин и пароль</p>
 
     <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
             <label class="visually-hidden" for="login-login">Логин</label>
-            <input class="login-icon-user" type="email" id="login-login" name="login" placeholder="email@example.com">
+            <input class="login-icon-user" type="text" id="login-login" name="login" placeholder="email@example.com">
         </p>
         <p>
             <label class="visually-hidden" for='login-password'>Пароль</label>
             <input class="login-icon-password" type="password" id="login-password" name='password' placeholder="********">
         </p>
         <p class="login-help">
-            <input class="login-checkbox visually-hidden" type="checkbox" id="login-chek" name='chek'>
+            <input class="login-checkbox visually-hidden" type="checkbox" id="login-chek" name='savelogin'>
             <label class='login-checkbox-label' for="login-chek">Запомните меня</label>
             <a class="restore" href="#">Я забыл пароль!</a>
         </p>
@@ -178,10 +180,11 @@
     </form>
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
 </Section>
-<section class="modal modal-map display-off">
+<section class="modal modal-map">
     <h2 class="visually-hidden">Как до нас добраться?</h2>
     <!--Здесь будет карта-->
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
 </section>
+<script type="module" src="./js/main.js"></script>
 </body>
 </html>
